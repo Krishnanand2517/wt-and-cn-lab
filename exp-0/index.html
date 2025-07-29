@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator-container">
+      <div id="display">0</div>
+
+      <div class="calculator-grid">
+        <!-- Row 1 -->
+        <button onclick="appendFunction('sin')" class="btn btn-func">
+          sin
+        </button>
+        <button onclick="appendFunction('cos')" class="btn btn-func">
+          cos
+        </button>
+        <button onclick="appendFunction('tan')" class="btn btn-func">
+          tan
+        </button>
+        <button onclick="appendFunction('log')" class="btn btn-func">
+          log
+        </button>
+        <button onclick="clearLastEntry()" class="btn btn-special">DEL</button>
+
+        <!-- Row 2 -->
+        <button onclick="appendFunction('sqrt')" class="btn btn-func">√</button>
+        <button onclick="appendValue('(')" class="btn btn-func">(</button>
+        <button onclick="appendValue(')')" class="btn btn-func">)</button>
+        <button onclick="appendValue('^')" class="btn btn-func">^</button>
+        <button onclick="clearDisplay()" class="btn btn-special">C</button>
+
+        <!-- Row 3 -->
+        <button onclick="appendValue('7')" class="btn btn-num">7</button>
+        <button onclick="appendValue('8')" class="btn btn-num">8</button>
+        <button onclick="appendValue('9')" class="btn btn-num">9</button>
+        <button onclick="appendValue('÷')" class="btn btn-op">÷</button>
+        <button onclick="appendValue('3.1415926535')" class="btn btn-func">
+          π
+        </button>
+
+        <!-- Row 4 -->
+        <button onclick="appendValue('4')" class="btn btn-num">4</button>
+        <button onclick="appendValue('5')" class="btn btn-num">5</button>
+        <button onclick="appendValue('6')" class="btn btn-num">6</button>
+        <button onclick="appendValue('×')" class="btn btn-op">×</button>
+        <button onclick="appendFunction('factorial')" class="btn btn-func">
+          n!
+        </button>
+
+        <!-- Row 5 -->
+        <button onclick="appendValue('1')" class="btn btn-num">1</button>
+        <button onclick="appendValue('2')" class="btn btn-num">2</button>
+        <button onclick="appendValue('3')" class="btn btn-num">3</button>
+        <button onclick="appendValue('-')" class="btn btn-op">−</button>
+        <button
+          onclick="calculateResult()"
+          class="btn btn-equal"
+          id="equal-btn"
+        >
+          =
+        </button>
+
+        <!-- Row 6 -->
+        <button onclick="appendValue('0')" class="btn btn-num" id="zero-btn">
+          0
+        </button>
+        <button onclick="appendValue('.')" class="btn btn-num">.</button>
+        <button onclick="appendValue('+')" class="btn btn-op">+</button>
+      </div>
+    </div>
+
+    <script src="calculator.js"></script>
+  </body>
+</html>

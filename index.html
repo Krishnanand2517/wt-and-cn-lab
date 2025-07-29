@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSSC 513 Lab Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="dashboard-files/style.css" />
+  </head>
+
+  <body class="bg-gradient-to-br from-slate-50 to-blue-50 min-h-screen">
+    <header
+      class="relative bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900 text-white overflow-hidden"
+    >
+      <!-- Background decorative elements -->
+      <div class="absolute inset-0">
+        <div
+          class="absolute top-0 left-0 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"
+        ></div>
+        <div
+          class="absolute top-0 right-0 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"
+          style="animation-delay: 2s"
+        ></div>
+        <div
+          class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"
+          style="animation-delay: 4s"
+        ></div>
+      </div>
+
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-5"
+      >
+        <div
+          style="
+            background-image: radial-gradient(
+              circle,
+              rgba(255, 255, 255, 0.1) 1px,
+              transparent 1px
+            );
+            background-size: 20px 20px;
+          "
+        ></div>
+      </div>
+
+      <div class="relative z-10 max-w-6xl mx-auto px-6 py-12">
+        <div
+          class="flex flex-col lg:flex-row lg:items-center lg:justify-between"
+        >
+          <!-- Main title section -->
+          <div class="mb-8 lg:mb-0">
+            <div class="flex items-center gap-4 mb-4">
+              <div
+                class="p-3 bg-white bg-opacity-20 rounded-xl backdrop-blur-sm"
+              >
+                <span class="text-3xl">🎓</span>
+              </div>
+              <div>
+                <h1
+                  class="text-5xl font-extrabold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent mb-2"
+                >
+                  CSSC 513
+                </h1>
+                <div class="text-2xl font-semibold text-blue-100">
+                  Practical V
+                </div>
+              </div>
+            </div>
+            <p class="text-xl text-blue-100 max-w-lg leading-relaxed">
+              Web Technology and Computer Networks Laboratory
+            </p>
+            <div class="mt-4 flex items-center gap-2 text-blue-200">
+              <span class="w-12 h-px bg-blue-300"></span>
+              <span class="text-sm font-medium">Academic Session 2025-26</span>
+            </div>
+          </div>
+
+          <!-- Student info card -->
+          <div class="lg:ml-8">
+            <div
+              class="bg-white bg-opacity-10 backdrop-blur-md rounded-2xl p-6 border border-white border-opacity-20 shadow-2xl"
+            >
+              <div class="flex items-center gap-3 mb-4">
+                <div
+                  class="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center"
+                >
+                  <span class="text-white font-bold text-lg">KY</span>
+                </div>
+                <div>
+                  <h3 class="font-bold text-lg">Student Details</h3>
+                  <p class="text-blue-200 text-sm">Int. M.Sc. 5th Year</p>
+                </div>
+              </div>
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-blue-200 text-sm">Name:</span>
+                  <span class="font-semibold">Krishnanand Yadav</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-blue-200 text-sm">Register No:</span>
+                  <span class="font-semibold">21384113</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="p-6 max-w-6xl mx-auto space-y-8">
+      <!-- Progress Overview -->
+      <section class="animate-fade-in">
+        <div class="glass-effect rounded-2xl p-6 shadow-lg">
+          <h2 class="text-2xl font-bold mb-6 text-gray-800">
+            Progress Overview
+          </h2>
+
+          <!-- Progress Bar -->
+          <div class="mb-6">
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-sm font-medium text-gray-700"
+                >Overall Progress</span
+              >
+              <span
+                class="text-sm font-bold text-gray-900"
+                id="progress-percentage"
+                >0%</span
+              >
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-3">
+              <div
+                class="progress-bar h-3 rounded-full"
+                id="progress-bar"
+                style="width: 0%"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Status Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div
+              class="status-badge completed-badge text-white p-4 rounded-xl text-center"
+            >
+              <div class="text-2xl font-bold" id="complete-count">0</div>
+              <div class="text-sm opacity-90">Completed</div>
+            </div>
+            <div
+              class="status-badge incomplete-badge text-white p-4 rounded-xl text-center"
+            >
+              <div class="text-2xl font-bold" id="incomplete-count">10</div>
+              <div class="text-sm opacity-90">Remaining</div>
+            </div>
+            <div
+              class="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-4 rounded-xl text-center"
+            >
+              <div class="text-2xl font-bold">10</div>
+              <div class="text-sm opacity-90">Total</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Filter and Sort Options -->
+      <section class="animate-fade-in">
+        <div
+          class="flex flex-col sm:flex-row gap-4 items-center justify-between"
+        >
+          <h2 class="text-2xl font-bold text-gray-800">Experiments</h2>
+          <div class="flex gap-3">
+            <select
+              id="filter-status"
+              class="px-4 py-2 rounded-lg border border-gray-300 bg-white shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            >
+              <option value="all">All Experiments</option>
+              <option value="completed">Completed</option>
+              <option value="incomplete">Incomplete</option>
+            </select>
+            <button
+              id="clear-all"
+              class="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg shadow-sm transition-colors"
+            >
+              Reset All
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Web Technology Section -->
+      <section class="animate-fade-in">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="text-3xl">🌐</span>
+          <h2 class="text-2xl font-bold text-gray-800">Web Technology</h2>
+          <div
+            class="flex-1 h-px bg-gradient-to-r from-blue-300 to-transparent"
+          ></div>
+        </div>
+        <div id="web-experiments" class="space-y-4"></div>
+      </section>
+
+      <!-- Computer Networks Section -->
+      <section class="animate-fade-in">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="text-3xl">🔗</span>
+          <h2 class="text-2xl font-bold text-gray-800">Computer Networks</h2>
+          <div
+            class="flex-1 h-px bg-gradient-to-r from-purple-300 to-transparent"
+          ></div>
+        </div>
+        <div id="network-experiments" class="space-y-4"></div>
+      </section>
+    </main>
+
+    <footer class="text-center p-8 mt-12 text-gray-600 bg-white">
+      <div class="max-w-4xl mx-auto">
+        <p class="text-lg font-medium">
+          &copy; 2025
+          <a href="https://github.com/Krishnanand2517" target="_blank"
+            >Krishnanand Yadav</a
+          >
+        </p>
+        <p class="text-sm mt-2 opacity-70">
+          Designed for CSSC 513: Web Technology and Computer Networks Laboratory
+        </p>
+      </div>
+    </footer>
+
+    <script src="dashboard-files/dashboard.js"></script>
+  </body>
+</html>
