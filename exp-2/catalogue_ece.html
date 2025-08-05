@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2 style="text-align: center">ECE Books Catalogue</h2>
+    <table>
+      <tr>
+        <th>Image</th>
+        <th>Details</th>
+        <th>Price (est.)</th>
+        <th>Add to Cart</th>
+      </tr>
+      <tr>
+        <td>
+          <img
+            src="images/art_of_electronics.jpg"
+            alt="The Art of Electronics"
+          />
+        </td>
+        <td>
+          Book: The Art of Electronics<br />
+          Author: Paul Horowitz & Winfield Hill<br />
+          Publisher: Cambridge University Press (3rd ed. 2015)
+        </td>
+        <td>Rs 2,500</td>
+        <td>
+          <button
+            onclick="addToCart({ 
+    title: 'The Art of Electronics', 
+    price: 2500, 
+    image: 'images/art_of_electronics.jpg' 
+})"
+          >
+            Add to cart
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img
+            src="images/boylestad.jpg"
+            alt="Electronic Devices and Circuit Theory"
+          />
+        </td>
+        <td>
+          Book: Electronic Devices and Circuit Theory<br />
+          Author: Robert L. Boylestad & Louis Nashelsky<br />
+          Publisher: Pearson (latest ed. 2023)
+        </td>
+        <td>Rs 600</td>
+        <td>
+          <button
+            onclick="addToCart({ 
+    title: 'Electronic Devices and Circuit Theory', 
+    price: 600, 
+    image: 'images/boylestad.jpg' 
+})"
+          >
+            Add to cart
+          </button>
+        </td>
+      </tr>
+    </table>
+
+    <script src="script.js"></script>
+  </body>
+</html>

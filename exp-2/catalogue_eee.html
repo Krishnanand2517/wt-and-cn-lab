@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2 style="text-align: center">EEE Books Catalogue</h2>
+    <table>
+      <tr>
+        <th>Image</th>
+        <th>Details</th>
+        <th>Price (est.)</th>
+        <th>Add to Cart</th>
+      </tr>
+      <tr>
+        <td>
+          <img
+            src="images/introduction_to_electrodynamics.jpg"
+            alt="Introduction to Electrodynamics"
+          />
+        </td>
+        <td>
+          Book: Introduction to Electrodynamics<br />
+          Author: David J. Griffiths<br />
+          Publisher: Cambridge University Press (5th ed. 2023)
+        </td>
+        <td>Rs 1,300</td>
+        <td>
+          <button
+            onclick="addToCart({ 
+    title: 'Introduction to Electrodynamics', 
+    price: 1300, 
+    image: 'images/introduction_to_electrodynamics.jpg' 
+})"
+          >
+            Add to cart
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img
+            src="images/electromagnetics_vol1.jpg"
+            alt="Electromagnetics Vol 1"
+          />
+        </td>
+        <td>
+          Book: Electromagnetics Vol 1<br />
+          Author: Steven W. Ellingson<br />
+          Publisher: Virginia Tech Libraries (Open Textbook, 2018)
+        </td>
+        <td>Free / Open</td>
+        <td>
+          <button
+            onclick="addToCart({ 
+    title: 'Electromagnetics Vol 1', 
+    price: 0, 
+    image: 'images/electromagnetics_vol1.jpg' 
+})"
+          >
+            Add to cart
+          </button>
+        </td>
+      </tr>
+    </table>
+
+    <script src="script.js"></script>
+  </body>
+</html>
