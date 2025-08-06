@@ -4,7 +4,7 @@
     <title>Cart</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body onload="renderCart()">
+  <body>
     <h2 style="text-align: center">🛒 Your Cart</h2>
     <table>
       <thead>
@@ -17,11 +17,17 @@
         </tr>
       </thead>
       <tbody id="cart-body">
-        <!-- Filled dynamically -->
+        <tr>
+          <td><img src="images/sicp.jpg" height="80" /></td>
+          <td>Structure and Interpretation of Computer Programs</td>
+          <td>Rs 1,200</td>
+          <td>1</td>
+          <td><button>Remove</button></td>
+        </tr>
       </tbody>
     </table>
-    <h3 id="total" style="text-align: center; margin-top: 20px"></h3>
-
-    <script src="script.js"></script>
+    <h3 id="total" style="text-align: center; margin-top: 20px">
+      Total: Rs 1,200
+    </h3>
   </body>
 </html>
