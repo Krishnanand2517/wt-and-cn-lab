@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2 style="text-align: center">CIVIL Books Catalogue</h2>
+    <table>
+      <tr>
+        <th>Image</th>
+        <th>Details</th>
+        <th>Price (est.)</th>
+        <th>Add to Cart</th>
+      </tr>
+      <tr>
+        <td>
+          <img
+            src="images/meriam_mechanics.jpg"
+            alt="Engineering Mechanics Meriam & Kraige"
+          />
+        </td>
+        <td>
+          Book: Engineering Mechanics: Statics & Dynamics<br />
+          Author: J.L. Meriam & L.G. Kraige<br />
+          Publisher: Wiley (9th ed. 2021)
+        </td>
+        <td>Rs 900</td>
+        <td>
+          <button
+            onclick="addToCart({ 
+    title: 'Engineering Mechanics Meriam & Kraige', 
+    price: 900, 
+    image: 'images/meriam_mechanics.jpg' 
+})"
+          >
+            Add to cart
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img
+            src="images/das_geotechnical.jpg"
+            alt="Principles of Geotechnical Engineering"
+          />
+        </td>
+        <td>
+          Book: Principles of Geotechnical Engineering<br />
+          Author: Braja M. Das<br />
+          Publisher: Cengage Learning (8th ed. 2015)
+        </td>
+        <td>Rs 800</td>
+        <td>
+          <button
+            onclick="addToCart({ 
+    title: 'Principles of Geotechnical Engineering', 
+    price: 800, 
+    image: 'images/das_geotechnical.jpg' 
+})"
+          >
+            Add to cart
+          </button>
+        </td>
+      </tr>
+    </table>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2 style="text-align: center">CSE Books Catalogue</h2>
+    <table>
+      <tr>
+        <th>Image</th>
+        <th>Details</th>
+        <th>Price (est.)</th>
+        <th>Add to Cart</th>
+      </tr>
+      <tr>
+        <td>
+          <img
+            src="images/aima.jpg"
+            alt="Artificial Intelligence: A Modern Approach"
+          />
+        </td>
+        <td>
+          Book: Artificial Intelligence: A Modern Approach<br />
+          Author: Stuart J. Russell & Peter Norvig<br />
+          Publisher: Prentice Hall (4th ed. 2020)
+        </td>
+        <td>Rs 1,800</td>
+        <td>
+          <button
+            onclick="addToCart({ 
+    title: 'Artificial Intelligence: A Modern Approach', 
+    price: 1800, 
+    image: 'images/aima.jpg' 
+})"
+          >
+            Add to cart
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img
+            src="images/sicp.jpg"
+            alt="Structure and Interpretation of Computer Programs"
+          />
+        </td>
+        <td>
+          Book: Structure and Interpretation of Computer Programs<br />
+          Author: Harold Abelson, Gerald Jay Sussman & Julie Sussman<br />
+          Publisher: MIT Press (2nd ed.)
+        </td>
+        <td>Rs 1,200</td>
+        <td>
+          <button
+            onclick="addToCart({ 
+    title: 'SICP: Structure and Interpretation of Computer Programs', 
+    price: 1200, 
+    image: 'images/sicp.jpg' 
+})"
+          >
+            Add to cart
+          </button>
+        </td>
+      </tr>
+    </table>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="auth-container">
+      <h2>Registration</h2>
+
+      <form action="home.html" method="post">
+        <!-- Name, Password, Email, Phone number, Sex -->
+        <input type="text" name="fullname" placeholder="Full Name" required />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <div>
+          <label>Sex:</label><br />
+          <label
+            ><input type="radio" name="sex" value="male" required /> Male</label
+          >
+          <label><input type="radio" name="sex" value="female" /> Female</label>
+          <label><input type="radio" name="sex" value="other" /> Other</label>
+        </div>
+
+        <!-- Date of Birth -->
+        <div>
+          <label>Date of Birth:</label><br />
+          <select name="dob-day" required>
+            <option value="">Day</option>
+            <!-- Days 1-31 -->
+            <script>
+              for (let i = 1; i <= 31; i++) {
+                document.write(`<option value="${i}">${i}</option>`);
+              }
+            </script>
+          </select>
+
+          <select name="dob-month" required>
+            <option value="">Month</option>
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+          </select>
+
+          <select name="dob-year" required>
+            <option value="">Year</option>
+            <script>
+              let currentYear = new Date().getFullYear();
+              for (let y = currentYear; y >= 1900; y--) {
+                document.write(`<option value="${y}">${y}</option>`);
+              }
+            </script>
+          </select>
+        </div>
+
+        <!-- Languages Known -->
+        <div>
+          <label>Languages Known:</label><br />
+          <label
+            ><input type="checkbox" name="languages" value="english" />
+            English</label
+          >
+          <label
+            ><input type="checkbox" name="languages" value="telugu" />
+            Telugu</label
+          >
+          <label
+            ><input type="checkbox" name="languages" value="hindi" />
+            Hindi</label
+          >
+          <label
+            ><input type="checkbox" name="languages" value="tamil" />
+            Tamil</label
+          >
+        </div>
+
+        <!-- Address -->
+        <div>
+          <label>Address:</label><br />
+          <textarea
+            name="address"
+            placeholder="Enter your address"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+
+        <div
+          style="
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+          "
+        >
+          <button type="submit">Register</button>
+          <button type="reset" style="background-color: #e74c3c">Reset</button>
+        </div>
+      </form>
+
+      <div class="link">
+        Already have an account?
+        <a href="login.html" target="mainFrame">Login</a>
+      </div>
+    </div>
+  </body>
+</html>

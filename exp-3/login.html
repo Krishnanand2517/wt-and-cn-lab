@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="auth-container">
+      <h2>Login</h2>
+
+      <form action="home.html" method="post">
+        <input
+          type="text"
+          name="username"
+          placeholder="Username or Email"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <div
+          style="
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+          "
+        >
+          <button type="submit">Login</button>
+          <button type="reset" style="background-color: #e74c3c">Reset</button>
+        </div>
+      </form>
+
+      <div class="link">
+        Don't have an account?
+        <a href="registration.html" target="mainFrame">Register</a>
+      </div>
+    </div>
+  </body>
+</html>
