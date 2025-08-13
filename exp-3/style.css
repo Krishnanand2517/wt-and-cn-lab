@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kalam', cursive;
+    background-color: #fdf6e3;
+    background-image: 
+        radial-gradient(circle at 25% 25%, #f4ede4 2px, transparent 2px),
+        radial-gradient(circle at 75% 75%, #eee8df 1px, transparent 1px);
+    background-size: 50px 50px;
+    color: #2d3748;
+    line-height: 1.5;
+}
+
+/* TOP FRAME */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    background-color: #fff8dc;
+    color: #2d3748;
+    padding: 0 25px;
+    border-bottom: 3px solid #4a5568;
+    border-image: repeating-linear-gradient(45deg, #4a5568 0px, #4a5568 5px, transparent 5px, transparent 10px) 1;
+    transform: rotate(-0.2deg);
+    box-shadow: 2px 3px 0px #d69e2e;
+}
+
+.logo {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.logo span {
+    font-size: 28px;
+    font-weight: 700;
+    color: #d69e2e;
+    transform: rotate(1deg);
+    text-shadow: 2px 2px 0px #fff;
+}
+
+.links a {
+    color: #4a5568;
+    margin: 0 18px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    position: relative;
+    transform: rotate(-0.5deg);
+    transition: all 0.2s ease;
+}
+
+.links a:hover {
+    color: #d69e2e;
+    transform: rotate(0.5deg) scale(1.1);
+}
+
+.links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #d69e2e;
+    transition: width 0.3s ease;
+}
+
+.links a:hover::after {
+    width: 100%;
+}
+
+/* LEFT FRAME */
+.sidebar {
+    height: 100%;
+    background-color: #f7fafc;
+    border-right: 4px dashed #cbd5e0;
+    position: relative;
+}
+
+.sidebar::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 3px;
+    height: calc(100% - 40px);
+    background-color: #e53e3e;
+    border-radius: 2px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 18px 25px;
+    color: #4a5568;
+    text-decoration: none;
+    font-weight: 400;
+    transform: rotate(-0.3deg);
+    transition: all 0.2s ease;
+    border-bottom: 1px dotted #cbd5e0;
+}
+
+.sidebar a:hover {
+    background-color: #fff5f5;
+    color: #e53e3e;
+    transform: rotate(0.3deg) translateX(8px);
+    border-left: 4px solid #e53e3e;
+}
+
+/* TABLES */
+table {
+    width: 88%;
+    margin: 35px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #fff;
+    border: 3px solid #4a5568;
+    border-radius: 15px;
+    transform: rotate(-0.5deg);
+    box-shadow: 5px 5px 0px #d69e2e;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 16px 20px;
+    text-align: center;
+    border-bottom: 2px dashed #cbd5e0;
+}
+
+th {
+    background-color: #fff5f5;
+    color: #2d3748;
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 3px solid #e53e3e;
+    position: relative;
+}
+
+th::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background-color: #d69e2e;
+    border-radius: 2px;
+}
+
+td {
+    color: #4a5568;
+    position: relative;
+}
+
+tr:nth-child(even) td {
+    background-color: #f7fafc;
+}
+
+tr:hover td {
+    background-color: #fffbeb;
+    transform: scale(1.02);
+}
+
+td img {
+    max-height: 110px;
+    border-radius: 12px;
+    border: 3px solid #cbd5e0;
+    transform: rotate(-1deg);
+    transition: transform 0.2s ease;
+}
+
+td img:hover {
+    transform: rotate(1deg) scale(1.05);
+    border-color: #d69e2e;
+}
+
+/* HEADINGS */
+h2 {
+    margin-top: 2rem;
+}
+
+/* BUTTONS */
+button {
+    background-color: #d69e2e;
+    color: #2d3748;
+    border: 3px solid #2d3748;
+    padding: 14px 22px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Kalam', cursive;
+    border-radius: 25px;
+    cursor: pointer;
+    transform: rotate(-1deg);
+    box-shadow: 3px 3px 0px #2d3748;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: #ecc94b;
+    transform: rotate(1deg) translateY(-2px);
+    box-shadow: 4px 6px 0px #2d3748;
+}
+
+button:active {
+    transform: rotate(0deg) translateY(1px);
+    box-shadow: 1px 1px 0px #2d3748;
+}
+
+button[type="reset"] {
+    background-color: #fc8181;
+    color: #2d3748;
+}
+
+button[type="reset"]:hover {
+    background-color: #f56565;
+}
+
+/* FORMS */
+.auth-container {
+    max-width: 450px;
+    margin: 80px auto;
+    padding: 45px;
+    background-color: #fff;
+    border: 4px solid #4a5568;
+    border-radius: 20px;
+    transform: rotate(0.5deg);
+    box-shadow: 6px 6px 0px #d69e2e;
+    position: relative;
+}
+
+.auth-container::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    width: calc(100% - 50px);
+    height: 2px;
+    background-color: #e53e3e;
+    border-radius: 1px;
+}
+
+.auth-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2d3748;
+    font-weight: 700;
+    font-size: 26px;
+    transform: rotate(-0.5deg);
+}
+
+.auth-container input {
+    width: 100%;
+    padding: 16px 18px;
+    margin-bottom: 22px;
+    border: 2px solid #cbd5e0;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: 'Kalam', cursive;
+    background-color: #f7fafc;
+    color: #2d3748;
+    transform: rotate(-0.2deg);
+    transition: all 0.2s ease;
+}
+
+.auth-container input:focus {
+    outline: none;
+    border-color: #d69e2e;
+    background-color: #fffbeb;
+    transform: rotate(0.2deg);
+    box-shadow: 2px 2px 0px #d69e2e;
+}
+
+/* Match textarea and select with input styles */
+.auth-container select,
+.auth-container textarea {
+    width: 100%;
+    padding: 16px 18px;
+    margin-bottom: 22px;
+    border: 2px solid #cbd5e0;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: 'Kalam', cursive;
+    background-color: #f7fafc;
+    color: #2d3748;
+    transform: rotate(-0.2deg);
+    transition: all 0.2s ease;
+}
+
+.auth-container select:focus,
+.auth-container textarea:focus {
+    outline: none;
+    border-color: #d69e2e;
+    background-color: #fffbeb;
+    transform: rotate(0.2deg);
+    box-shadow: 2px 2px 0px #d69e2e;
+}
+
+/* Label styling */
+.auth-container label {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #2d3748;
+}
+
+/* Grouped fields for radios & checkboxes */
+.auth-container .option-group {
+    margin-bottom: 22px;
+    transform: rotate(-0.2deg);
+}
+
+.auth-container .option-group label {
+    font-weight: normal;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+/* Slight spacing for radio/checkbox inputs */
+.auth-container input[type="radio"],
+.auth-container input[type="checkbox"] {
+    width: auto;
+    margin-right: 6px;
+    transform: rotate(0);
+}
+
+
+.auth-container .link {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 14px;
+    color: #718096;
+    transform: rotate(0.3deg);
+}
+
+.auth-container .link a {
+    color: #e53e3e;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}
+
+/* HOME */
+.home-container {
+    max-width: 780px;
+    margin: 70px auto;
+    padding: 55px;
+    background-color: #fff;
+    border: 4px solid #4a5568;
+    border-radius: 25px;
+    transform: rotate(-0.3deg);
+    box-shadow: 8px 8px 0px #d69e2e;
+    text-align: center;
+    position: relative;
+}
+
+.home-container::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 20px;
+    height: 20px;
+    background-color: #e53e3e;
+    border-radius: 50%;
+    box-shadow: 
+        40px 0 0 #d69e2e,
+        80px 0 0 #38b2ac;
+}
+
+.home-container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #2d3748;
+    font-weight: 700;
+    transform: rotate(0.5deg);
+    text-shadow: 2px 2px 0px #fff5f5;
+}
+
+.home-container p {
+    font-size: 18px;
+    margin-bottom: 35px;
+    color: #4a5568;
+    transform: rotate(-0.2deg);
+}
+
+.home-buttons {
+    margin-bottom: 40px;
+}
+
+.home-buttons a {
+    text-decoration: none;
+    margin: 0 12px;
+}
+
+.home-buttons button {
+    background-color: #38b2ac;
+    transform: rotate(0.5deg);
+}
+
+.home-buttons button:hover {
+    background-color: #4fd1c7;
+    transform: rotate(-0.5deg) translateY(-3px);
+}
+
+.features {
+    text-align: left;
+    margin-top: 30px;
+    background-color: #f7fafc;
+    padding: 30px;
+    border: 2px dashed #cbd5e0;
+    border-radius: 15px;
+    transform: rotate(0.2deg);
+}
+
+.features h3 {
+    color: #2d3748;
+    margin-bottom: 18px;
+    font-size: 20px;
+    font-weight: 700;
+    transform: rotate(-0.5deg);
+}
+
+.features ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.features li {
+    margin: 12px 0;
+    font-size: 16px;
+    color: #4a5568;
+    padding-left: 25px;
+    position: relative;
+    transform: rotate(-0.1deg);
+}
+
+.features li::before {
+    content: '★';
+    position: absolute;
+    left: 0;
+    color: #d69e2e;
+    font-size: 18px;
+    transform: rotate(15deg);
+}
+
+/* CART */
+#total {
+    font-size: 22px;
+    color: #2d3748;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 700;
+    padding: 18px;
+    background-color: #fff5f5;
+    border: 3px solid #e53e3e;
+    border-radius: 15px;
+    transform: rotate(-0.5deg);
+    box-shadow: 3px 3px 0px #d69e2e;
+}
+
+/* PAYMENT */
+.payment-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #d69e2e;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 12px;
+  text-decoration: none;
+  transform: rotate(-0.2deg);
+  transition: all 0.2s ease;
+}
+
+.payment-btn:hover {
+  background-color: #b7791f;
+  transform: rotate(0.2deg) scale(1.02);
+}
+
+/* Payment form layout tweaks */
+.auth-container .two-column {
+  display: flex;
+  gap: 10px;
+}
+
+.auth-container .two-column input {
+  flex: 1;
+}
+
+/* Payment page button style (reuses your theme) */
+.auth-container button {
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #d69e2e;
+  color: #fff;
+  transform: rotate(-0.2deg);
+  transition: all 0.2s ease;
+}
+
+.auth-container button:hover {
+  background-color: #b7791f;
+  transform: rotate(0.2deg) scale(1.02);
+}
