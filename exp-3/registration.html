@@ -8,17 +8,48 @@
     <div class="auth-container">
       <h2>Registration</h2>
 
-      <form action="home.html" method="post">
-        <!-- Name, Password, Email, Phone number, Sex -->
-        <input type="text" name="fullname" placeholder="Full Name" required />
+      <form id="registrationForm" action="home.html" method="post">
+        <!-- Name -->
+        <span class="error" id="nameError"></span>
+        <input
+          type="text"
+          id="fullname"
+          name="fullname"
+          placeholder="Full Name"
+          required
+        />
+
+        <!-- Password -->
+        <span class="error" id="passwordError"></span>
         <input
           type="password"
+          id="password"
           name="password"
           placeholder="Password"
           required
         />
-        <input type="email" name="email" placeholder="Email" required />
-        <input type="tel" name="phone" placeholder="Phone Number" required />
+
+        <!-- Email -->
+        <span class="error" id="emailError"></span>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+
+        <!-- Phone -->
+        <span class="error" id="phoneError"></span>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Phone Number"
+          required
+        />
+
+        <!-- Sex -->
         <div>
           <label>Sex:</label><br />
           <label
@@ -33,7 +64,6 @@
           <label>Date of Birth:</label><br />
           <select name="dob-day" required>
             <option value="">Day</option>
-            <!-- Days 1-31 -->
             <script>
               for (let i = 1; i <= 31; i++) {
                 document.write(`<option value="${i}">${i}</option>`);
@@ -91,8 +121,9 @@
 
         <!-- Address -->
         <div>
-          <label>Address:</label><br />
+          <label for="address">Address:</label><br />
           <textarea
+            id="address"
             name="address"
             placeholder="Enter your address"
             rows="3"
@@ -107,7 +138,9 @@
             justify-content: space-between;
           "
         >
-          <button type="submit">Register</button>
+          <button type="submit" id="registerBtn" class="disabled" disabled>
+            Register
+          </button>
           <button type="reset" style="background-color: #e74c3c">Reset</button>
         </div>
       </form>
@@ -117,5 +150,7 @@
         <a href="login.html" target="mainFrame">Login</a>
       </div>
     </div>
+
+    <script src="validation.js"></script>
   </body>
 </html>

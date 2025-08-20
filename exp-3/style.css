@@ -510,3 +510,22 @@ button[type="reset"]:hover {
   background-color: #b7791f;
   transform: rotate(0.2deg) scale(1.02);
 }
+
+/* VALIDATION */
+.error {
+  color: red;
+  font-size: 0.9em;
+}
+
+input.valid {
+  border: 2px solid green;
+}
+
+input.invalid {
+  border: 2px solid red;
+}
+
+#registerBtn.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
