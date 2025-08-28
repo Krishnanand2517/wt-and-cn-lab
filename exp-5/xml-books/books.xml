@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="books.xsl"?>
+<!DOCTYPE bookstore SYSTEM "books.dtd">
+<bookstore>
+    <book>
+        <title>Artificial Intelligence: A Modern Approach</title>
+        <author>Stuart J. Russell &amp; Peter Norvig</author>
+        <isbn>978-0136042594</isbn>
+        <publisher>Prentice Hall</publisher>
+        <edition>3rd edition</edition>
+        <price>847</price>
+    </book>
+    <book>
+        <title>SICP: Structure and Interpretation of Computer Programs</title>
+        <author>Abelson, Sussman &amp; Sussman</author>
+        <isbn>978-0262510875</isbn>
+        <publisher>MIT Press</publisher>
+        <edition>2nd edition</edition>
+        <price>4283</price>
+    </book>
+    <book>
+        <title>The Art of Electronics</title>
+        <author>Horowitz &amp; Hill</author>
+        <isbn>978-0521809269</isbn>
+        <publisher>Cambridge University Press</publisher>
+        <edition>3rd edition</edition>
+        <price>2340</price>
+    </book>
+    <book>
+        <title>Introduction to Electrodynamics</title>
+        <author>David J. Griffiths</author>
+        <isbn>978-9332550445</isbn>
+        <publisher>Pearson</publisher>
+        <edition>4th edition</edition>
+        <price>2500</price>
+    </book>
+</bookstore>
