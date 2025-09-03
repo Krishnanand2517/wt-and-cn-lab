@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="home-container">
+      <h1>Welcome to the Online Bookstore</h1>
+      <p>
+        Your one-stop platform for textbooks in Computer Science, ECE, EEE, and
+        Civil Engineering.
+      </p>
+
+      <h2>Hello, <span id="username"></span> 👋</h2>
+      <p>Email: <span id="email"></span></p>
+
+      <div class="home-buttons">
+        <button
+          id="logoutBtn"
+          style="margin-top: 20px; background-color: #e74c3c"
+        >
+          Logout
+        </button>
+      </div>
+
+      <div class="features">
+        <h3>📚 Features:</h3>
+        <ul>
+          <li>✔ View categorized book catalogues</li>
+          <li>✔ Add books to your cart</li>
+          <li>✔ Clean and responsive layout using frames</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      const user = JSON.parse(localStorage.getItem("user"));
+
+      if (!user) {
+        window.location.href = "login.html";
+      } else {
+        document.getElementById("username").innerText = user.fullname;
+        document.getElementById("email").innerText = user.email;
+      }
+
+      document.getElementById("logoutBtn").addEventListener("click", () => {
+        localStorage.removeItem("user");
+        window.location.href = "login.html";
+      });
+    </script>
+  </body>
+</html>

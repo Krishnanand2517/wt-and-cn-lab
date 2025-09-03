@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="auth-container">
+      <h2>Login</h2>
+
+      <form id="loginForm">
+        <input
+          type="email"
+          id="loginEmail"
+          name="email"
+          placeholder="Email"
+          required
+        />
+        <input
+          type="password"
+          id="loginPassword"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <div
+          style="
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+          "
+        >
+          <button type="submit" id="loginBtn">Login</button>
+          <button type="reset" style="background-color: #e74c3c">Reset</button>
+        </div>
+      </form>
+
+      <div class="link">
+        Don't have an account?
+        <a href="registration.html" target="mainFrame">Register</a>
+      </div>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>
