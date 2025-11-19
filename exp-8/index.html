@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Experiment 5</title>
+    <title>Experiment 8</title>
     <link rel="stylesheet" href="../dashboard-files/shared.css" />
   </head>
+
   <body>
     <main class="wrap">
       <section class="card">
@@ -29,14 +30,35 @@
                 stroke-width="1.5"
               />
             </svg>
+            Routing & NAT
           </div>
         </header>
 
         <div class="links">
-          <a class="link" href="books.xml" target="_blank">
-            <span class="chip">XML</span>
-            <div class="label">XML Bookstore</div>
-            <div class="sub">Browse and transform book data</div>
+          <!-- Static Routing -->
+          <a
+            class="link"
+            href="https://github.com/Krishnanand2517/wt-and-cn-lab/blob/main/exp-8/router_basic.pkt"
+            target="_blank"
+          >
+            <span class="chip">Routing</span>
+            <div class="label">Routing</div>
+            <div class="sub">
+              Configure static routes between multiple networks
+            </div>
+            <img src="router_basic.png" alt="Static Routing Topology" />
+          </a>
+
+          <!-- NAT -->
+          <a
+            class="link"
+            href="https://github.com/Krishnanand2517/wt-and-cn-lab/blob/main/exp-8/router_nat.pkt"
+            target="_blank"
+          >
+            <span class="chip">NAT</span>
+            <div class="label">Network Address Translation</div>
+            <div class="sub">Implement PAT and dynamic NAT on a router</div>
+            <img src="router_nat.png" alt="NAT Configuration Topology" />
           </a>
         </div>
       </section>

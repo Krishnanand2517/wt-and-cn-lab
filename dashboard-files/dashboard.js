@@ -20,45 +20,47 @@ const experiments = [
   },
   {
     id: 4,
-    title: "Online Applications using PHP",
-    desc: "Create dynamic online applications with PHP backend functionality and server-side processing.",
+    title: "Online Application with Data Access",
+    desc: "Develop comprehensive online applications with database integration and data management.",
     category: "Web Technology",
   },
   {
     id: 5,
-    title: "Online Application with Data Access",
-    desc: "Develop comprehensive online applications with database integration and data management.",
+    title: "XML Data Handling",
+    desc: "Create, parse, and validate XML documents, and understand how XML is used for structured data representation.",
     category: "Web Technology",
   },
   // Computer Networks Experiments
   {
     id: 6,
-    title: "LAN Setup and Topology",
-    desc: "Establish a Local Area Network and connect multiple LANs using static routing protocols.",
+    title: "Network Topologies",
+    desc: "Understand, design, and analyze different types of network topologies.",
     category: "Computer Networks",
   },
+
   {
     id: 7,
-    title: "RIP and OSPF Redistribution",
-    desc: "Analyze network performance when redistributing routes between RIP and OSPF protocols.",
+    title: "VLAN Configuration",
+    desc: "Create and manage VLANs and segment networks for improved performance and security.",
     category: "Computer Networks",
   },
+
   {
     id: 8,
-    title: "Network Security Analysis",
-    desc: "Assess vulnerabilities and implement comprehensive network security techniques.",
+    title: "Routing and NAT",
+    desc: "Configure routing and Network Address Translation for proper network communication.",
     category: "Computer Networks",
   },
   {
     id: 9,
-    title: "Traffic Control",
-    desc: "Implement traffic flow control mechanisms for network performance optimization.",
+    title: "Firewall Configuration",
+    desc: "Configure, deploy, and analyze firewall rules in a given network environment.",
     category: "Computer Networks",
   },
   {
     id: 10,
-    title: "Firewall Configuration",
-    desc: "Configure, deploy, and analyze firewall rules in a complex network environment.",
+    title: "Port Security",
+    desc: "Implement and verify port security mechanisms on switches to control access and prevent unauthorized devices.",
     category: "Computer Networks",
   },
 ];

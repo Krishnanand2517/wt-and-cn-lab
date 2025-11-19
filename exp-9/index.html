@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Experiment 5</title>
+    <title>Experiment 9</title>
     <link rel="stylesheet" href="../dashboard-files/shared.css" />
   </head>
+
   <body>
     <main class="wrap">
       <section class="card">
@@ -29,14 +30,35 @@
                 stroke-width="1.5"
               />
             </svg>
+            Firewall Configuration
           </div>
         </header>
 
         <div class="links">
-          <a class="link" href="books.xml" target="_blank">
-            <span class="chip">XML</span>
-            <div class="label">XML Bookstore</div>
-            <div class="sub">Browse and transform book data</div>
+          <!-- ASA Firewall -->
+          <a
+            class="link"
+            href="https://github.com/Krishnanand2517/wt-and-cn-lab/blob/main/exp-9/firewall_asa.pkt"
+            target="_blank"
+          >
+            <span class="chip">ASA</span>
+            <div class="label">ASA Firewall</div>
+            <div class="sub">
+              Configure ASA rules, ACLs, inspection, and NAT
+            </div>
+            <img src="firewall_asa.png" alt="ASA Firewall Topology" />
+          </a>
+
+          <!-- Router Firewall -->
+          <a
+            class="link"
+            href="https://github.com/Krishnanand2517/wt-and-cn-lab/blob/main/exp-9/firewall_router.pkt"
+            target="_blank"
+          >
+            <span class="chip">Router</span>
+            <div class="label">Router Firewall</div>
+            <div class="sub">Set up ACL-based filtering on Cisco routers</div>
+            <img src="firewall_router.png" alt="Router Firewall Topology" />
           </a>
         </div>
       </section>
